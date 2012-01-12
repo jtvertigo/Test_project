@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <siteconfig> 
+        <dbserver>localhost</dbserver>
+        <dbserverport>3306</dbserverport>
+        <dbuser>root</dbuser>
+        <dbpassword>root123</dbpassword>
+        <dbname>test</dbname>
+        <sitename>Тестовый сайт</sitename>
+    </siteconfig>
+</config>
