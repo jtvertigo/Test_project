@@ -23,7 +23,7 @@ class Singleton
 
     public function getInit() 
     {
-        if (($this->_siteConfig = new SiteConfig()) and ($this->_content = new Article())) {
+        if (($this->_siteConfig = new SiteConfig()) and ($this->_db = new Db()) and ($this->_content = new Article())) {
             return self::$instance;
         }
     }

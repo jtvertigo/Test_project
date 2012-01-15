@@ -1,28 +1,35 @@
-<?php 
+<?php
 
-    /* Errors OFF */
-    error_reporting(E_ALL ^ E_NOTICE);
+/*
+ * Admin front-controller 
+ *
+ */
 
-    /* Get Constants */
-    require_once realpath(__DIR__) . DIRECTORY_SEPARATOR . 'defines.php';
+/* Errors OFF */
+error_reporting(E_ALL ^ E_NOTICE);
 
-    /* Get Libraries */
-    require_once SITE_DIR_LIBS . 'Smarty' . DS . 'Smarty.class.php';
-    require_once SITE_DIR_LIBS . 'redbean' . DS . 'rb.php';
+/* Get Constants */
+require_once realpath(__DIR__) . DIRECTORY_SEPARATOR . 'defines.php';
 
-    /* Get Site configuration */
-    require_once SITE_DIR_CONFIG . 'SiteConfig.php';
+/* Get Libraries */
+require_once SITE_DIR_LIBS . 'Smarty' . DS . 'Smarty.class.php';
 
-    /* Get Controller */
-    require_once SITE_DIR_CONTROLLERS . 'Article.php';
+/* Get Site configuration */
+require_once SITE_DIR_CONFIG . 'SiteConfig.php';
 
-    /* Get templater */
-    require_once SITE_DIR_CONFIG . 'Pager.php';
+/* Get database connection */
+require_once SITE_DIR_CONFIG . 'Db.php';
 
-    /* Get Singleton */
-    require_once SITE_DIR_CONFIG . 'Singleton.php';
+/* Get Controller */
+require_once SITE_DIR_CONTROLLERS . 'Article.php';
 
-    /* Get Instance */
-    $instance = Singleton::getInstance()->getInit()->getLayout('admin');
+/* Get templater */
+require_once SITE_DIR_CONFIG . 'Pager.php';
+
+/* Get Singleton */
+require_once SITE_DIR_CONFIG . 'Singleton.php';
+
+/* Get Instance */
+$instance = Singleton::getInstance()->getInit()->getLayout('admin');
 
 ?>

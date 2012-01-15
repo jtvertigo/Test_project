@@ -1,6 +1,9 @@
 Options Indexes Includes FollowSymLinks
 AddDefaultCharset utf8
 
+#AllowOverride All
+Allow from All
+
 # Turn off magic_quotes_gpc
 php_flag magic_quotes_gpc Off
 php_flag magic_quotes_runtime Off

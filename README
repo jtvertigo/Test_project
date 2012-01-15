@@ -3,9 +3,8 @@ Test project
 Configuration file in: /config/ini.xml
 
 Used solutions:
-    1. ORM library RedBean(http://redbeanphp.com/, https://github.com/gabordemooij/redbean);
-    2. Smarty template engine(http://smarty.net);
-    3. Bootstrap toolkit(https://github.com/twitter/bootstrap);
+    1. Smarty template engine(http://smarty.net);
+    2. Bootstrap toolkit(https://github.com/twitter/bootstrap);
 
 Front-end: /index.php
 Admin-panel: /admin.php

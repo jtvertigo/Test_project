@@ -6,10 +6,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
     <link href="./styles/styles.css" rel="stylesheet">
     <script type="text/javascript" src="./libs/js/url.js"></script>
 

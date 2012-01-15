@@ -15,9 +15,9 @@ class Pager extends Article
     {
         $this->pager = new Smarty();
         $this->pager->setTemplateDir(SITE_DIR_VIEWS);
-        $this->pager->setCompileDir(SITE_DIR_LIBS . 'Smarty/compile/templates_c');
-        $this->pager->setCacheDir(SITE_DIR_LIBS . 'Smarty/compile/cache');
-        $this->pager->setConfigDir(SITE_DIR_LIBS . 'Smarty/compile/configs');
+        $this->pager->setCompileDir(SITE_DIR_LIBS . 'Smarty' . DS . 'compile' . DS . 'templates_c');
+        $this->pager->setCacheDir(SITE_DIR_LIBS . 'Smarty' . DS . 'compile' . DS . 'cache');
+        $this->pager->setConfigDir(SITE_DIR_LIBS . 'Smarty' . DS . 'compile' . DS . 'configs');
         $this->pager->debugging = false;
         return $this->pager;
     }

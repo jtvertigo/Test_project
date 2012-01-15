@@ -3,20 +3,19 @@
 class SiteConfig 
 {
     public $siteName;
-    static private $_DBServer;
-    static private $_DBServerPort;
-    static private $_DBUser;
-    static private $_DBPassword;
-    static private $_DBName;
+    static public $_DBServer;
+    static public $_DBServerPort;
+    static public $_DBUser;
+    static public $_DBPassword;
+    static public $_DBName;
 
-    function __construct() 
+    public function __construct() 
     {
         $this->parseIniXML(SITE_DIR_CONFIG . 'ini.xml');
-        $this->getORMlib();
     }
 
     /* Parsing ini.xml with Site's configuration */
-    function parseIniXML($iniFile) 
+    public function parseIniXML($iniFile) 
     {
         $iniXML = simplexml_load_file($iniFile);
 
@@ -26,11 +25,6 @@ class SiteConfig
         self::$_DBUser         = $iniXML->siteconfig->dbuser;
         self::$_DBPassword     = $iniXML->siteconfig->dbpassword;
         self::$_DBName         = $iniXML->siteconfig->dbname;
-    }
-
-    private function getORMlib() 
-    {
-        R::setup('mysql:host=' . self::$_DBServer . ';dbname=' . self::$_DBName,  self::$_DBUser, self::$_DBPassword);
     }
     
 }
