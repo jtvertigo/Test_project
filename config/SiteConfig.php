@@ -19,12 +19,12 @@ class SiteConfig
     {
         $iniXML = simplexml_load_file($iniFile);
 
-        $this->siteName        = $iniXML->siteconfig->sitename;
-        self::$_DBServer       = $iniXML->siteconfig->dbserver;
-        self::$_DBServerPort   = $iniXML->siteconfig->dbserverport;
-        self::$_DBUser         = $iniXML->siteconfig->dbuser;
-        self::$_DBPassword     = $iniXML->siteconfig->dbpassword;
-        self::$_DBName         = $iniXML->siteconfig->dbname;
+        $this->siteName      = $iniXML->siteconfig->sitename;
+        self::$_DBServer     = $iniXML->siteconfig->dbserver;
+        self::$_DBServerPort = $iniXML->siteconfig->dbserverport;
+        self::$_DBUser       = $iniXML->siteconfig->dbuser;
+        self::$_DBPassword   = $iniXML->siteconfig->dbpassword;
+        self::$_DBName       = $iniXML->siteconfig->dbname;
     }
     
 }

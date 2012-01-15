@@ -1,6 +1,10 @@
 {extends file='content.tpl'}
 {block name='content'}
 
+{if isset($error)}
+    <span class="label important">{$error}</span>
+{/if}
+
 <form method="post">
 <fieldset>
     <legend>Для входа, пожалуйста, введите <em>логин</em> и <em>пароль</em></legend>

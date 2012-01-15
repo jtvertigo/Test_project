@@ -49,8 +49,17 @@ class Article extends Db
     public function getArticle($id) 
     {
         (int) $id;
-        $query = $this->getQuery("SELECT id,title,text,user_name,public FROM articles WHERE id = {$id}");
-        return mysql_fetch_assoc($query);
+        if (is_numeric($id)) {
+            $query = $this->getQuery("SELECT id,title,text,user_name,public FROM articles WHERE id = {$id}");
+            return mysql_fetch_assoc($query);
+        } elseif ($id == '0') {
+            $query = $this->getQuery("SELECT id,title,text,user_name,public FROM articles WHERE id = 1");
+            return mysql_fetch_assoc($query);
+        } 
+        else {
+            $query = $this->getQuery("SELECT id,title,text,user_name,public FROM articles WHERE id = 1");
+            return mysql_fetch_assoc($query);
+        }
     }
     
     public function getSiteConfig() 

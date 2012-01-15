@@ -6,7 +6,7 @@
  */
 
 /* Errors OFF */
-error_reporting(E_ALL ^ E_NOTICE);
+#error_reporting(E_ALL ^ E_NOTICE);
 
 /* Get Constants */
 require_once realpath(__DIR__) . DIRECTORY_SEPARATOR . 'defines.php';

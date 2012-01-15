@@ -1,6 +1,7 @@
 {extends file='content.tpl'}
 {block name='content'}
 
+{if $article}
 <form method="post">
 <fieldset>
     <legend>Редактирование статьи</legend>
@@ -43,5 +44,8 @@
     </div>
 </fieldset>
 </form>
+{else}
+    <h2>Статьи с таким id({$smarty.get.manage}) не существует</h2>
+{/if}
 
 {/block}
